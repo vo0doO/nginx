@@ -2,6 +2,7 @@ services:
 
     nginx:
         image: umputun/nginx-le:latest
+        network_mode: host
         restart: always
         container_name: nginx
         hostname: nginx
