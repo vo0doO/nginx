@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Nginx !</title>
+  <link rel="icon" type="image/x-icon" href="https://idatica.com/wp-content/uploads/2022/11/ico_id-lb-250-80x80.png">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Tahoma, Verdana, Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .content {
+      max-width: 600px;
+      /* Ширина контейнера для контента */
+      width: 80%;
+      /* 80% от ширины экрана */
+      margin: auto;
+      /* Выравнивание по центру */
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      /* Для закругленных углов изображения */
+      margin-top: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    @media screen and (max-width: 600px) {
+      .content {
+        padding: 10px;
+      }
+    }
+
+    @media screen and (min-height: 800px) {
+      body {
+        background-color: #fff;
+        /* Изменение цвета фона для экранов с большой высотой */
+      }
+
+      .content {
+        max-height: 100vh;
+        /* Уменьшение максимальной высоты контейнера на экранах с большой высотой */
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      .content {
+        font-size: 22px;
+        /* Изменение размера шрифта для экранов с большой шириной */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <h1>Welcome !!!</h1>
+    <img src="/home/charles.jpg" alt="Charles">
+  </div>
+</body>
+
+</html>

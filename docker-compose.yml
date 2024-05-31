@@ -1,0 +1,28 @@
+services:
+
+    nginx:
+        image: umputun/nginx-le:latest
+        restart: always
+        container_name: nginx
+        hostname: nginx
+        logging:
+            driver: json-file
+            options:
+                max-size: "10m"
+                max-file: "5"
+
+        volumes:
+            - ./ssl:/etc/nginx/ssl
+            - ./services/browser-proxy-server.conf:/etc/nginx/service-browser-proxy-server.conf
+            # Static data
+            - ./static:/var/www/static
+
+        ports:
+            - 80:80
+            - 443:443
+
+        environment:
+            - TZ=Europe/Moscow
+            - LETSENCRYPT=true
+            - LE_EMAIL=${LE_EMAIL}
+            - LE_FQDN=${LE_FQDN}
