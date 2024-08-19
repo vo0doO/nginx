@@ -13,8 +13,7 @@ services:
 
     volumes:
       - ./ssl:/etc/nginx/ssl
-      - ./services/browser-proxy-server.conf:/etc/nginx/service-browser-proxy-server.conf
-      - ./services/brusnika-server.conf:/etc/nginx/service-brusnika-server.conf
+      - ./services/all.conf:/etc/nginx/service-all.conf
       # Static data
       - ./static:/var/www/static
 
