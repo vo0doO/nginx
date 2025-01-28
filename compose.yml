@@ -17,6 +17,7 @@ services:
       - ./services/browser-proxy-server.conf:/etc/nginx/browser-proxy-server.conf
       - ./services/brusnika-server.conf:/etc/nginx/brusnika-server.conf
       - ./services/scooter-server.conf:/etc/nginx/scooter-server.conf
+      - ./htpasswd_scooter:/etc/nginx/htpasswd_scooter
       # Static data
       - ./static:/var/www/static
 
